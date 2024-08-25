@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-app.use(express.json());
 
+app.use(express.json());
+app.use(cors());
 app.post('/bfhl', (req, res) => {
     const data = req.body.data;
     const numbers = [];
@@ -21,7 +23,7 @@ app.post('/bfhl', (req, res) => {
 
     const response = {
         is_success: true,
-        user_id: "shashank_suggala",
+        user_id: "shashank_suggala_05062003",
         email: "shashanktsx@gmail.com",
         roll_number: "9205579193",
         numbers: numbers,
